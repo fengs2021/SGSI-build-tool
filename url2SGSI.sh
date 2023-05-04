@@ -96,8 +96,8 @@ elif [ $fixbug == false ] ; then
   "$LOCALDIR"/make.sh $build $TYPE $ZIP || LEAVE
 fi
 
-rm -rf "$LOCALDIR/tmp"
-rm -rf "$LOCALDIR/workspace"
+#rm -rf "$LOCALDIR/tmp"
+#rm -rf "$LOCALDIR/workspace"
 if [ -d "$LOCALDIR/SGSI" ]; then
    echo "Porting SGSI done!"
 else
