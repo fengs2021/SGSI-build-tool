@@ -75,14 +75,14 @@ function check_source_version() {
   local ret=0
   echo $CURRENT_SYSTEM_VERSION: $sourcever
   case $sourcever in
-  *12*) local ret=0 ;;
+  *13*) local ret=0 ;;
   *) local ret=1 ;;
   esac
 
-#  if [ $ret != 0 ]; then
-#    echo "$CURRENT_SYSTEM_VERSION $sourcever $UNSUPPORTED_STR"
-#    exit 1
-#  fi
+  if [ $ret != 0 ]; then
+    echo "$CURRENT_SYSTEM_VERSION $sourcever $UNSUPPORTED_STR"
+    exit 1
+  fi
 }
 
 function normal() {
