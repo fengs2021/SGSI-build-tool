@@ -104,7 +104,7 @@ function normal() {
       sed -i '/\/system\/firmware /d' $configdir/system_file_contexts
       sed -i '/\/system\/cache /d' $configdir/system_file_contexts
 
-      echo "\n/system/persist u:object_r:mnt_vendor_file:s0" >>$configdir/system_file_contexts
+      echo -e "\n/system/persist u:object_r:mnt_vendor_file:s0" >>$configdir/system_file_contexts
       echo "/system/bt_firmware u:object_r:bt_firmware_file:s0" >>$configdir/system_file_contexts
       echo "/system/firmware u:object_r:firmware_file:s0" >>$configdir/system_file_contexts
       echo "/system/cache u:object_r:cache_file:s0" >>$configdir/system_file_contexts
