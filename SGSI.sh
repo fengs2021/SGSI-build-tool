@@ -79,10 +79,10 @@ function check_source_version() {
   *) local ret=1 ;;
   esac
 
-  if [ $ret != 0 ]; then
-    echo "$CURRENT_SYSTEM_VERSION $sourcever $UNSUPPORTED_STR"
-    exit 1
-  fi
+#  if [ $ret != 0 ]; then
+#    echo "$CURRENT_SYSTEM_VERSION $sourcever $UNSUPPORTED_STR"
+#    exit 1
+#  fi
 }
 
 function normal() {
