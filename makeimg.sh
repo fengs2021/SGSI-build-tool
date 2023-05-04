@@ -59,7 +59,7 @@ case $os_repackage_type in
     echo "/ u:object_r:system_file:s0" > $configdir/system_A_contexts
     echo "/system u:object_r:system_file:s0" >> $configdir/system_A_contexts
     echo "/system(/.*)? u:object_r:system_file:s0" >> $configdir/system_A_contexts
-    echo "/system/lost+found u:object_r:system_file:s0" >> $configdir/system_A_contexts
+    echo "/system/lost+found u:object_r:system_file:s0\n" >> $configdir/system_A_contexts
 
     echo "/ 0 0 0755" > $configdir/system_A_fs
     echo "system 0 0 0755" >> $configdir/system_A_fs
