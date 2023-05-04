@@ -454,7 +454,7 @@ if [ -L $systemdir/vendor ]; then
       fix_bug
     fi
     echo "$SIGNING_WITH_AOSPKEY"
-    $bin/tools/signapk/resign.py "$systemdir" "$bin/tools/signapk/AOSP_security" "$bin/$HOST/$platform/lib64" >$TARGETDIR/resign.log
+#    $bin/tools/signapk/resign.py "$systemdir" "$bin/tools/signapk/AOSP_security" "$bin/$HOST/$platform/lib64" >$TARGETDIR/resign.log
     ./makeimg.sh "--ab${use_config}"
     exit 0
     ;;
