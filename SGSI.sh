@@ -116,7 +116,7 @@ function normal() {
       sed -i '/system\/firmware /d' $configdir/system_fs_config
       sed -i '/system\/cache /d' $configdir/system_fs_config
 
-      echo "system/persist 0 0 0755" >>$configdir/system_fs_config
+      echo -e "\nsystem/persist 0 0 0755" >>$configdir/system_fs_config
       echo "system/bt_firmware 0 0 0644" >>$configdir/system_fs_config
       echo "system/firmware 0 0 0644" >>$configdir/system_fs_config
       echo "system/cache 1000 2001 0770" >>$configdir/system_fs_config
