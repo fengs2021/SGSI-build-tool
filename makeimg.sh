@@ -59,7 +59,7 @@ case $os_repackage_type in
     echo "/ u:object_r:system_file:s0" > $configdir/system_A_contexts
     echo "/system u:object_r:system_file:s0" >> $configdir/system_A_contexts
     echo "/system(/.*)? u:object_r:system_file:s0" >> $configdir/system_A_contexts
-    echo "/system/lost+found u:object_r:system_file:s0\n" >> $configdir/system_A_contexts
+    echo "/system/lost+found u:object_r:system_file:s0" >> $configdir/system_A_contexts
 
     echo "/ 0 0 0755" > $configdir/system_A_fs
     echo "system 0 0 0755" >> $configdir/system_A_fs
@@ -104,7 +104,7 @@ case $os_repackage_type in
     if [[ -f $configdir/$target_contexts ]]; then
       echo "/firmware(/.*)?         u:object_r:firmware_file:s0" >> $configdir/$target_contexts
       echo "/bt_firmware(/.*)?      u:object_r:bt_firmware_file:s0" >> $configdir/$target_contexts
-      echo "\n/persist(/.*)?          u:object_r:mnt_vendor_file:s0" >> $configdir/$target_contexts
+      echo "/persist(/.*)?          u:object_r:mnt_vendor_file:s0" >> $configdir/$target_contexts
       echo "/dsp                    u:object_r:rootfs:s0" >> $configdir/$target_contexts
       echo "/oem                    u:object_r:rootfs:s0" >> $configdir/$target_contexts
       echo "/op1                    u:object_r:rootfs:s0" >> $configdir/$target_contexts
